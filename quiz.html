@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="shortcut icon" href="./ASSECTS/jupiter.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/quiz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class='overlay'></div>
+<div class='timer'>0 seconds</div>
+<div class='intro modal'>
+  <div class='intro modal_inner'>
+    <div class='intro modal_inner__close c_modal st'>
+      x
+    </div>
+    <div class='intro modal_inner__title'>
+      <h2>Planet quiz</h2>
+    </div>
+    <div class='intro modal_inner__text'>
+      <p>Drag the planets in the correct order as fast as you can!</p>
+    </div>
+    <div class='intro modal_inner__image'>
+      <h1> ARE YOU READY !! </h1>
+    </div>
+    <div class='intro modal_inner__cta c_modal'>
+      <button class='st'>Lets go!</button>
+    </div>
+  </div>
+</div>
+<div class='winner modal'>
+  <div class='winner modal_inner'>
+    <div class='winner modal_inner__title'>
+      <h2>
+        Well done, you won in
+        <span class='t'>10.00</span>
+      </h2>
+    </div>
+    <div class='winner modal_inner__text'>
+      <p>You are a proper clever cloggs! Why not share this with a friend and see if they are as smart as you!</p>
+      <h2><a href="/index.html">Go Home</a></h2>
+    </div>
+    <div class='winner modal_inner__restart'>
+    </div>
+  </div>
+</div>
+<div class='planets'>
+  <div class='planets_stars'></div>
+  <div class='planets_container'>
+    <div class='planets_container__title'>
+      <h1>Planets quiz</h1>
+    </div>
+    <div class='planets_container__title'>
+      <h3>Drag the planets into the correct order</h3>
+    </div>
+    <div class='planets_container__planets'>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='venus'>
+          <img src='./ASSECTS/venus.png'>
+        </div>
+        <span>Venus</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='earth'>
+          <img src='./ASSECTS/earth.png'>
+        </div>
+        <span>Earth</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='saturn'>
+          <img src='./ASSECTS/saturn.png'>
+        </div>
+        <span>Saturn</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='neptune'>
+          <img src='./ASSECTS/neptune.png'>
+        </div>
+        <span>Neptune</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='mercury'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mercury.png'>
+        </div>
+        <span>Mercury</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='mars'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_mars.png'>
+        </div>
+        <span>Mars</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='jupiter'>
+          <img src='./ASSECTS/jupiter.png'>
+        </div>
+        <span>Jupiter</span>
+      </div>
+      <div class='planet_wrap'>
+        <div class='planet' id="planet" data-planet='uranus'>
+          <img src='./ASSECTS/uranus.png'>
+        </div>
+        <span>Uranus</span>
+      </div>
+    </div>
+    <div class='planets_container__quiz'>
+      <div id="planet_holder" class='planet_holder sun null' data-planet='sun'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='./ASSECTS/sun.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder mercury' data-planet='mercury'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='./ASSECTS/mercury.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder venus' data-planet='venus'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='./ASSECTS/venus.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder earth' data-planet='earth'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='./ASSECTS/earth.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder mars' data-planet='mars'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='./ASSECTS/mars.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder jupiter' data-planet='jupiter'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_jupiter.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder saturn' data-planet='saturn'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_saturn.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder uranus' data-planet='uranus'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_uranus.png'>
+        </div>
+      </div>
+      <div id="planet_holder" class='planet_holder neptune' data-planet='neptune'>
+        <span>?</span>
+        <div class='planet_answer'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/pq_neptune.png'>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="./JS/quiz.js"></script>
+</body>
+
+</html>
