@@ -1,0 +1,92 @@
+body {
+    font-family: system-ui;
+    /* background-image: url(../ASSECTS/bg.png); */
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.container h1 {
+    padding-bottom: 50px;
+    font-size: 50px;
+}
+.buttons {
+    margin-top: 20px;
+}
+#fact {
+    color: rgb(0, 255, 213);
+    font-weight: bold;
+    text-shadow: 7px brown solid;
+    font-size: 25px;
+    font-family: Segoe UI;
+    padding: 40px;
+    background-color: rgba(120, 120, 40, 0.952);
+    border: solid rgb(41, 81, 57) 5px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 24
+}
+
+
+#details {
+    color: rgb(73, 226, 59);
+    font-weight: bold;
+    font-family: georgia;
+    font-size: 20px;
+    padding: 30px;
+    background-color: rgba(35, 88, 119, 0.868);
+    border: solid rgb(55, 13, 128) 2px;
+    border-radius: 20px;
+    margin-bottom: 70px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: solid 4px red ;
+    border-radius: 15px;
+}
+#prev {
+    margin-right: 80px;
+}
+
+
+/* FOR MAKING MOOVING IMGES */
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../ASSECTS/nasaimg.png'), url('../ASSECTS/earth.png');
+    background-repeat: repeat;
+    background-size: cover;
+    animation: moveBackground 30s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%, 103% 50%;
+    }
+    50% {
+        background-position: 50% 50%, 150% 150%;
+    }
+    100% {
+        background-position: 0% 0%, 200% 200%;
+    }
+}
