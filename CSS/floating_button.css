@@ -14,6 +14,7 @@
     font-size: 28px;
     text-decoration: none;
     z-index: 1000;
+    cursor:grab;
 }
 
 .floating-button a {
