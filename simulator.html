@@ -5,12 +5,13 @@
     <link rel="shortcut icon" href="./ASSECTS/earth.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovation Skyline</title>
+    <link rel="stylesheet" href="./CSS/floating_button.css">
     <link rel="stylesheet" href="./CSS/solar.css">
 </head>
 <body>
     
 <!-- AUDIO -->
-<audio autoplay loop>
+<audio id="background-music" autoplay loop>
   <source src="./ASSECTS/videoplayback.m4a" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
@@ -150,6 +151,14 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Floating Audio Button -->
+    <div class="floating-button" onclick="muteAudio()">
+      🔊
+  </div>
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script type="text/javascript">
     if (typeof jQuery == 'undefined') { 
@@ -160,5 +169,6 @@
     <script src="js/scripts.min.js"></script>
 
     <script src="./JS/solar.js"></script>
+    <script src="./JS/audio_control.js"></script>
 </body>
 </html>

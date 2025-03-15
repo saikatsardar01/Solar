@@ -1,0 +1,23 @@
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0078D4;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.floating-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

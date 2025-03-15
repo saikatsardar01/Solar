@@ -7,11 +7,12 @@
     <title>Space Facts</title>
     <link rel="shortcut icon" href="./ASSECTS/mercury.png" type="image/x-icon">
     <link rel="stylesheet" href="./CSS/facts.css">
+    <link rel="stylesheet" href="./CSS/floating_button.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_downward" />
 </head>
 
 <body>
-    <audio autoplay loop>
+    <audio id="background-music" autoplay loop>
         <source src="./ASSECTS/ambient-soundscapes-001-space-atmosphere-303246.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
@@ -30,7 +31,13 @@
         </div>
     </div>
 
+    <!-- For Floating Button -->
+    <div class="floating-button" onclick="muteAudio()">
+        🔊
+    </div>
+    
+
 </body>
 <script src="./JS/facts.js"></script>
-
+<script src="./JS/audio_control.js"></script>
 </html>
